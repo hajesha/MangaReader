@@ -1,4 +1,4 @@
-package com.hajesha.mangaapp.ui.dashboard
+package com.hajesha.mangaapp.ui.download
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.hajesha.mangaapp.R
 
-class DashboardFragment : Fragment() {
+class DownloadFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var downloadViewModel: DownloadViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-            ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(this, Observer {
+        downloadViewModel =
+            ViewModelProviders.of(this).get(DownloadViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_download, container, false)
+        val textView: TextView = root.findViewById(R.id.text_download)
+        downloadViewModel.text.observe(this, Observer {
             textView.text = it
         })
         return root
