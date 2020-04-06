@@ -2,4 +2,11 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="edit_rounded_corner">9dp</dimen>
+    <dimen name="rounded_corner_button_background">14dp</dimen>
+    <dimen name="edit_padding">10dp</dimen>
+    <dimen name="edit_border">1dp</dimen>
+    <dimen name="search_item_header">15sp</dimen>
+    <dimen name="text_body">13sp</dimen>
+
 </resources>

@@ -3,10 +3,41 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:statusBarColor">@color/colorPrimaryTransparent</item>
+
     </style>
     <style name="ToolBar" parent="Theme.AppCompat">
         <item name="android:textColorPrimary">@color/colorAccent</item>
         <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="Search_Heading">
+        <item name="android:textSize">@dimen/search_item_header</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="Search_Edit_Text">
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:background">@drawable/edit_rounded_corner</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:hint">@string/search_optional</item>
+        <item name="android:padding">@dimen/edit_padding</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="Search_Button">
+        <item name="android:textSize">@dimen/search_item_header</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/rounded_corner</item>
+        <item name="android:backgroundTint">@color/colorPrimaryDark</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:paddingStart">25dp</item>
+        <item name="android:paddingEnd">25dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:ambientShadowAlpha">0.75</item>
+        <item name="android:spotShadowAlpha">0.75</item>
     </style>
 </resources>
