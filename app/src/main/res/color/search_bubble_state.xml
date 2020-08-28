@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="@color/colorPrimaryDarkTransparent" android:state_checked="true" android:state_pressed="false"/>
-    <item android:color="@color/colorPrimaryDark" android:state_checked="true" android:state_pressed="true" />
-    <item android:color="@color/colorPrimaryTransparent" android:state_checked="false" android:state_pressed="false"/>
-    <item android:color="@color/colorPrimary" android:state_checked="false" android:state_pressed="true"/>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:chip="http://schemas.android.com/apk/res-auto">
+<!--    <item android:color="@color/colorPrimaryDarkTransparent" android:state_checked="select" android:state_pressed="false"/>-->
+<!--    <item android:color="@color/colorPrimaryDark" android:state_checked="select" android:state_pressed="true" />-->
+<!--    <item android:color="@color/colorPrimaryTransparent" android:state_checked="deselect" android:state_pressed="false"/>-->
+<!--    <item android:color="@color/colorPrimary" android:state_checked="deselect" android:state_pressed="true"/>-->
+<!--    <item android:color="@android:color/black" android:state_checked="unknown" android:state_pressed="false"/>-->
+<!--    <item android:color="@color/colorPrimaryDarkTransparent" android:state_checked="true" android:state_pressed="false"/>-->
+<!--    <item android:color="@color/colorPrimaryDark" android:state_checked="true" android:state_pressed="true" />-->
+<!--    <item android:color="@color/colorPrimaryTransparent" android:state_checked="false" android:state_pressed="false"/>-->
+<!--    <item android:color="@color/colorPrimary" android:state_checked="false" android:state_pressed="true"/>-->
+
 </selector>

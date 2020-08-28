@@ -20,6 +20,10 @@ public class Crawler {
 		getTitlesOnPage(searchPage());
 	}
 	
+	public static ArrayList<Chapter> getAllChapterPages(String startingChapter, String endingChapter) {
+		
+	}
+	
 	public static ArrayList<MangaOverview> getTitlesOnPage(Document page){
 		Elements mangas = page.body().select("div.manga-entry");
 		ArrayList<MangaOverview> listOfManga = new ArrayList<MangaOverview>();

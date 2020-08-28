@@ -1,4 +1,4 @@
-package com.hajesha.mangaapp.ui.notifications
+package com.hajesha.mangaapp.notifications
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

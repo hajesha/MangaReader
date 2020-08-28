@@ -4,5 +4,8 @@
     <color name="colorPrimaryTransparent">#BEF6BEFF</color>
     <color name="colorPrimaryDark">#CE18D1</color>
     <color name="colorPrimaryDarkTransparent">#BECE18D1</color>
+    <color name="colorDeselected">#FF7676</color>
+    <color name="colorSelected">#97FF95</color>
+    <color name="colorUnknown">@color/colorPrimary</color>
     <color name="colorAccent">#FFFFFF</color>
 </resources>

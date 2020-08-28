@@ -1,4 +1,4 @@
-package com.hajesha.mangaapp.ui.download
+package com.hajesha.mangaapp.download
 
 import android.os.Bundle
 import android.view.LayoutInflater

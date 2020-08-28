@@ -8,5 +8,6 @@
     <dimen name="edit_border">1dp</dimen>
     <dimen name="search_item_header">15sp</dimen>
     <dimen name="text_body">13sp</dimen>
+    <dimen name="chip_width">95dp</dimen>
 
 </resources>

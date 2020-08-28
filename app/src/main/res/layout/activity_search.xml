@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,6 +22,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/search_title" />
 
+            <!--TODO: Change the accent of the sliders-->
             <EditText
                 android:id="@+id/edit_title"
                 style="@style/Search_Edit_Text"
@@ -37,6 +36,7 @@
                 android:layout_marginTop="@dimen/edit_padding"
                 android:text="@string/search_author" />
 
+            <!--TODO: Change the accent of the sliders-->
             <EditText
                 android:id="@+id/edit_author"
                 style="@style/Search_Edit_Text"
@@ -51,40 +51,10 @@
                 android:text="@string/search_status" />
 
             <com.google.android.material.chip.ChipGroup
-                android:id="@+id/demographics"
+                android:id="@+id/status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:chipSpacing="5dp">
-
-<!--                <com.google.android.material.chip.Chip-->
-<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    app:chipBackgroundColor="@color/search_bubble_state"-->
-<!--                    android:text="choice1" />-->
-
-<!--                <com.google.android.material.chip.Chip-->
-<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    app:chipBackgroundColor="@color/search_bubble_state"-->
-<!--                    android:text="choice2" />-->
-
-<!--                <com.google.android.material.chip.Chip-->
-<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    app:chipBackgroundColor="@color/search_bubble_state"-->
-<!--                    android:text="choice3" />-->
-
-<!--                <com.google.android.material.chip.Chip-->
-<!--                    style="@style/Widget.MaterialComponents.Chip.Choice"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    app:chipBackgroundColor="@color/search_bubble_state"-->
-<!--                    android:text="choice4" />-->
-
-            </com.google.android.material.chip.ChipGroup>
+                app:chipSpacing="5dp" />
 
             <TextView
                 style="@style/Search_Heading"
@@ -93,42 +63,11 @@
                 android:layout_marginTop="@dimen/edit_padding"
                 android:text="@string/search_demographic" />
 
-            <!--            <LinearLayout-->
-            <!--                android:id="@+id/demographics"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:orientation="horizontal" />-->
-
             <com.google.android.material.chip.ChipGroup
+                android:id="@+id/demographics"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:chipSpacing="5dp">
-
-                <com.google.android.material.chip.Chip
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="choice" />
-
-                <com.google.android.material.chip.Chip
-                    style="@style/Widget.MaterialComponents.Chip.Action"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="action" />
-
-                <com.google.android.material.chip.Chip
-                    style="@style/Widget.MaterialComponents.Chip.Filter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="filter" />
-
-                <com.google.android.material.chip.Chip
-                    style="@style/Widget.MaterialComponents.Chip.Entry"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="entry" />
-
-            </com.google.android.material.chip.ChipGroup>
+                app:chipSpacing="5dp" />
 
             <TextView
                 style="@style/Search_Heading"
@@ -137,11 +76,11 @@
                 android:layout_marginTop="@dimen/edit_padding"
                 android:text="@string/search_warning" />
 
-            <LinearLayout
+            <com.google.android.material.chip.ChipGroup
                 android:id="@+id/warnings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" />
+                app:chipSpacing="5dp" />
 
             <TextView
                 style="@style/Search_Heading"
@@ -150,11 +89,34 @@
                 android:layout_marginTop="@dimen/edit_padding"
                 android:text="@string/search_genres" />
 
-            <LinearLayout
-                android:id="@+id/genres"
+<!--            <com.google.android.material.chip.ChipGroup-->
+<!--                android:id="@+id/genres"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:chipSpacing="5dp" />-->
+
+            <com.hajesha.mangaapp.customViews.DynamicGrid
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" />
+                android:id="@+id/genres"
+                app:columnWidth="@dimen/chip_width"
+                android:useDefaultMargins="true"/>
+
+<!--            <com.google.android.flexbox.FlexboxLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/genres"-->
+<!--                app:flexWrap="wrap"-->
+<!--                app:alignItems="stretch"-->
+<!--                app:alignContent="stretch"/>-->
+<!--            <GridLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:useDefaultMargins="true"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:columnCount="5"-->
+<!--                android:id="@+id/genres"/>-->
 
             <TextView
                 style="@style/Search_Heading"
@@ -163,11 +125,11 @@
                 android:layout_marginTop="@dimen/edit_padding"
                 android:text="@string/search_theme" />
 
-            <LinearLayout
+            <com.google.android.material.chip.ChipGroup
                 android:id="@+id/theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" />
+                app:chipSpacing="5dp" />
 
             <TextView
                 style="@style/Search_Heading"
@@ -176,15 +138,16 @@
                 android:layout_marginTop="@dimen/edit_padding"
                 android:text="@string/search_format" />
 
-            <LinearLayout
+            <com.google.android.material.chip.ChipGroup
                 android:id="@+id/format"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" />
+                app:chipSpacing="5dp" />
         </LinearLayout>
     </ScrollView>
 
     <TextView
+        android:id="@+id/search_button"
         style="@style/Search_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -192,5 +155,7 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="10dp"
         android:elevation="4dp"
-        android:text="@string/search_button" />
-</RelativeLayout>
+        android:text="@string/search_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
