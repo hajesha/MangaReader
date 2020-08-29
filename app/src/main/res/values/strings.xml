@@ -6,6 +6,9 @@
     <string name="title_download">Download</string>
     <string name="title_notifications">Notifications</string>
 
+    //Home Page
+    <string name="latest_update">Latest Updates</string>
+
     //Search Page
     <string name="search_title">Title</string>
     <string name="search_author">Author</string>
