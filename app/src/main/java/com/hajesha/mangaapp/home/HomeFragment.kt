@@ -48,19 +48,19 @@ class HomeFragment : Fragment() {
         var movieModel = UpdateBookModel(1, "title", "https://mangadex.org/images/manga/47286.jpeg?1594355449", 3)
         listOfUpdatedBook.add(movieModel)
 
-        var movieModel1 = UpdateBookModel(2, "this is a longer title that will not fit", "https://static.zerochan.net/Pandora.Hearts.full.1704822.jpg", 10)
+        var movieModel1 = UpdateBookModel(2, "this is a longer title that will not fit", "https://mangadex.org/images/manga/47275.large.jpg?1586678016", 10)
         listOfUpdatedBook.add(movieModel1)
 
-        var movieModel2 = UpdateBookModel(3, "pretty good book", "https://upload.wikimedia.org/wikipedia/en/2/2f/Akatsuki001.jpg", 1)
+        var movieModel2 = UpdateBookModel(3, "pretty good book", "https://mangadex.org/images/manga/48167.large.jpg?1589964790", 1)
         listOfUpdatedBook.add(movieModel2)
 
         var movieModel3 = UpdateBookModel(4, "title", "https://mangadex.org/images/manga/47286.jpeg?1594355449", 3)
         listOfUpdatedBook.add(movieModel3)
 
-        var movieModel4 = UpdateBookModel(2, "this is a longer title that will not fit", "https://static.zerochan.net/Pandora.Hearts.full.1704822.jpg", 10)
+        var movieModel4 = UpdateBookModel(2, "this is a longer title that will not fit", "https://mangadex.org/images/manga/45833.large.jpg?1594355230", 10)
         listOfUpdatedBook.add(movieModel4)
 
-        var movieModel5 = UpdateBookModel(4, "pretty good book", "https://upload.wikimedia.org/wikipedia/en/2/2f/Akatsuki001.jpg", 1)
+        var movieModel5 = UpdateBookModel(4, "pretty good book", "https://mangadex.org/images/manga/41852.large.jpg?1594443425", 1)
         listOfUpdatedBook.add(movieModel5)
 
         var movieModel6 = UpdateBookModel(1, "title", "https://mangadex.org/images/manga/47286.jpeg?1594355449", 3)
