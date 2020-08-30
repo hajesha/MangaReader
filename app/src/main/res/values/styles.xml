@@ -4,8 +4,8 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:statusBarColor">@color/colorPrimaryTransparent</item>
-
     </style>
+
     <style name="ToolBar" parent="Theme.MaterialComponents">
         <item name="android:textColorPrimary">@color/colorAccent</item>
         <item name="android:background">@color/colorPrimary</item>
