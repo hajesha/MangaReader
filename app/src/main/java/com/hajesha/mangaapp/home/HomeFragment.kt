@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.hajesha.mangaapp.R
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -33,10 +33,17 @@ class HomeFragment : Fragment() {
     }
 
     private fun initView() {
+
+        //toolbar stuff
+//        val toolbar = view!!.findViewById<Toolbar>(R.id.toolbar)
+//        (activity as? AppCompatActivity)?.setSupportActionBar(toolbar)
+////        (activity as? AppCompatActivity)?.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        val collapsingToolbar = view!!.findViewById<CollapsingToolbarLayout>(R.id.toolbar_layout)
+//        collapsingToolbar.title = "Latest Updates"
+
+        //recycler view stuff
         recyclerViewBook.layoutManager = GridLayoutManager(this.context,3)
-
         recyclerViewBook.addItemDecoration(GridItemDecoration(8, 3))
-
         val movieListAdapter = UpdateBookListGridRecycleAdapter()
         recyclerViewBook.adapter = movieListAdapter
         movieListAdapter.setUpdateBookList(generateDummyData())

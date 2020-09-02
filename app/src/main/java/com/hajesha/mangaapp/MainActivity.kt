@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
+       // setSupportActionBar(findViewById(R.id.toolbar))
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
@@ -30,24 +30,24 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_download, R.id.navigation_notifications
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.toolbar_menu, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id = item.getItemId()
-        if (id == R.id.action_search) {
-            Toast.makeText(this@MainActivity, "Action clicked", Toast.LENGTH_LONG).show()
-            startSearchView()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
-    }
+//
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        menuInflater.inflate(R.menu.toolbar_menu, menu)
+//        return true
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        val id = item.getItemId()
+//        if (id == R.id.action_search) {
+//            Toast.makeText(this@MainActivity, "Action clicked", Toast.LENGTH_LONG).show()
+//            startSearchView()
+//            return true
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
 
     fun startSearchView() {
         val intent = Intent(this, SearchActivity::class.java)
