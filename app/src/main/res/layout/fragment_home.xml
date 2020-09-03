@@ -6,30 +6,53 @@
 
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/appBarLayout"
+        android:background="@android:color/transparent"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            android:layout_height="300dp"
+            app:collapsedTitleTextAppearance="@style/Header_Collapsed_Text"
             app:contentScrim="@color/colorPrimary"
-            app:title="@string/latest_update"
-            >
-            <ImageView
+            app:expandedTitleTextAppearance="@style/Header_Expanded_Text"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="@string/latest_update">
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:src="@drawable/sample_title1"
-                android:scaleType="centerCrop"/>
+                android:layout_height="match_parent">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:padding="10dp"
+                    app:fillColor="#88FF0000"
+                    app:layout_constraintBottom_toBottomOf="@id/pager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:pageColor="@android:color/white"
+                    app:radius="5dp"
+                    app:strokeWidth="2dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

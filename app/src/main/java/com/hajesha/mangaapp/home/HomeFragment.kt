@@ -4,13 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
-import com.google.android.material.appbar.CollapsingToolbarLayout
+import androidx.viewpager.widget.ViewPager
 import com.hajesha.mangaapp.R
+import com.viewpagerindicator.CirclePageIndicator
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -41,8 +40,14 @@ class HomeFragment : Fragment() {
 //        val collapsingToolbar = view!!.findViewById<CollapsingToolbarLayout>(R.id.toolbar_layout)
 //        collapsingToolbar.title = "Latest Updates"
 
+        //Pager Stuff
+        val viewPage = view!!.findViewById<ViewPager>(R.id.pager)
+        val adapter = HeaderImageAdapter(requireContext())
+        viewPage.adapter = adapter
+        val circlePageIndicator =  view!!.findViewById<CirclePageIndicator>(R.id.indicator);
+        circlePageIndicator.setViewPager(pager);
         //recycler view stuff
-        recyclerViewBook.layoutManager = GridLayoutManager(this.context,3)
+        recyclerViewBook.layoutManager = GridLayoutManager(requireContext(),3)
         recyclerViewBook.addItemDecoration(GridItemDecoration(8, 3))
         val movieListAdapter = UpdateBookListGridRecycleAdapter()
         recyclerViewBook.adapter = movieListAdapter
