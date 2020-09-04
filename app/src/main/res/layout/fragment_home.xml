@@ -5,6 +5,7 @@
     android:layout_height="match_parent">
 
 
+    <!--TODO: get rid of magic numbers-->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -13,13 +14,18 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapse"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             app:collapsedTitleTextAppearance="@style/Header_Collapsed_Text"
             app:contentScrim="@color/colorPrimary"
+            app:expandedTitleMarginBottom="15dp"
+            app:expandedTitleMarginStart="10dp"
+            app:expandedTitleMarginTop="15dp"
             app:expandedTitleTextAppearance="@style/Header_Expanded_Text"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
             app:title="@string/latest_update">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -27,21 +33,21 @@
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/pager"
                     android:layout_width="wrap_content"
-                    android:layout_height="250dp"
+                    android:layout_height="245dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <com.viewpagerindicator.CirclePageIndicator
                     android:id="@+id/indicator"
                     android:layout_width="match_parent"
                     android:layout_height="25dp"
                     android:padding="10dp"
-                    app:fillColor="#88FF0000"
+                    app:fillColor="@color/colorPrimaryDark"
                     app:layout_constraintBottom_toBottomOf="@id/pager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:pageColor="@android:color/white"
+                    app:pageColor="@color/colorAccent"
                     app:radius="5dp"
                     app:strokeWidth="2dp" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -52,6 +58,16 @@
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <!--    TODO: Make this perm for when you scroll down-->
+    <ImageView
+        android:id="@+id/search_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="right"
+        android:background="@drawable/update_circle"
+        android:padding="13dp"
+        android:src="@drawable/ic_search" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
