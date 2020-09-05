@@ -1,4 +1,4 @@
-package com.hajesha.mangaapp.home
+package com.hajesha.mangaapp.home.header
 
 import android.content.Context
 import android.view.View

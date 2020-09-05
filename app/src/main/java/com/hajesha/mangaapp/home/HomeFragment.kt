@@ -10,16 +10,15 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.appbar.AppBarLayout
 import com.hajesha.mangaapp.R
+import com.hajesha.mangaapp.home.header.HeaderImageAdapter
 import com.hajesha.mangaapp.search.SearchActivity
 import com.viewpagerindicator.CirclePageIndicator
-import com.viewpagerindicator.IconPageIndicator
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -142,7 +141,7 @@ class HomeFragment : Fragment() {
         var movieModel5 = UpdateBookModel(
             4,
             "pretty good book",
-            "https://mangadex.org/images/manga/41852.large.jpg?1594443425",
+            "https://mangadex.org/images/manga/3579.large.jpg?1532791283",
             1
         )
         listOfUpdatedBook.add(movieModel5)
@@ -150,7 +149,7 @@ class HomeFragment : Fragment() {
         var movieModel6 = UpdateBookModel(
             1,
             "title",
-            "https://mangadex.org/images/manga/47286.jpeg?1594355449",
+            "https://mangadex.org/images/manga/35866.large.jpg?1554326843",
             3
         )
         listOfUpdatedBook.add(movieModel6)
@@ -175,7 +174,7 @@ class HomeFragment : Fragment() {
         var movieModel9 = UpdateBookModel(
             1,
             "title",
-            "https://mangadex.org/images/manga/47286.jpeg?1594355449",
+            "https://mangadex.org/images/manga/20735.jpg?1519175683",
             3
         )
         listOfUpdatedBook.add(movieModel9)

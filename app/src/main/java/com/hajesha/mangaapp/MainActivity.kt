@@ -6,13 +6,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import android.widget.Toast
-
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
 import com.hajesha.mangaapp.search.SearchActivity
 
 class MainActivity : AppCompatActivity() {
