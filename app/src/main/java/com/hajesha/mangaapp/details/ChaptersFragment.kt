@@ -18,7 +18,7 @@ class ChaptersFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 //        descriptionViewModel = ViewModelProviders.of(this).get(DescriptionViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_description, container, false)
+        val root = inflater.inflate(R.layout.fragment_chapters, container, false)
         return root
     }
 
