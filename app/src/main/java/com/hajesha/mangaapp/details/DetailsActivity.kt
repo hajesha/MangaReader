@@ -13,9 +13,9 @@ class DetailsActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+//        setSupportActionBar(toolbar)
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val viewPager = findViewById<ViewPager>(R.id.viewpager)
         setUpViewPager(viewPager)
@@ -27,7 +27,7 @@ class DetailsActivity : AppCompatActivity(){
     private fun setUpViewPager(viewPager : ViewPager ) {
         val adapter = DetailsAdapter(supportFragmentManager)
         adapter.addFragment(DescriptionFragment(), "Description")
-        adapter.addFragment(DescriptionFragment(), "Chapters")
+        adapter.addFragment(ChaptersFragment(), "Chapters")
         viewPager.adapter = adapter
     }
 }

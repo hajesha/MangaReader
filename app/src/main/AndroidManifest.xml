@@ -5,6 +5,7 @@
     package="com.hajesha.mangaapp">
 
     <dist:module dist:instant="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -17,15 +18,18 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity android:name=".search.SearchActivity" />
+        <activity android:name=".details.DetailsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".search.SearchActivity">
-        </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
